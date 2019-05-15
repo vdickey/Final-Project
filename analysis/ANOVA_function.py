@@ -8,7 +8,7 @@ import numpy as np
 from scipy import stats
 import pandas as pd
 
-mean_data = pd.read_csv('file:///C:/Users/Victoria/Documents/Data Analytics/Final Project/analysis/Mean_Data.csv')
+mean_data = pd.read_csv('Mean_Data.csv')
 print (mean_data)
 
 fi = np.isfinite(mean_data['Log'])
@@ -30,7 +30,7 @@ print(mean_array)
 
 
 empty_array=[]
-variable_array =[1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4]      #fix so that the number corresponds to how many columns
+variable_array =[1,2,3,4,1,2,3,4,1,2,3,4,1,2,3,4]
 for values in variable_array:
     empty_array = np.append([empty_array],[mean_array], axis=None)
     print(values)
@@ -44,6 +44,4 @@ print(result)
 #this is a comparison of all of the possible means and their differences. 
 #This also shows us the upper and lower limits of the means according to a 95% confidence interval. 
 #It also shows us if we should reject or fail to reject the null hypothesis with a 95 % confidence.
-#Our null hypothesis is that there is no significant difference between temperature samples obtained 
-#from three different CTDs sitting in the same calibration bath
 #The multicomparison helps us see the significant differences in our means.
